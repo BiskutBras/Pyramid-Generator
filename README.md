@@ -3,6 +3,7 @@ By entering an input of whole number, generate a pyramid with number as the pyra
             
             
             #..
-            ##.
+            ##.  
             ###
             
+Pyramid with height = 3
