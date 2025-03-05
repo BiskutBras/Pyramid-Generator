@@ -3,9 +3,10 @@ public class Main {
 
 	public static void main(String[] args) {
 
-		pyramidGenerator pyramid = new pyramidGenerator();
-		pyramid.generate(8);
-
+		PyramidGenerator pyramid = new PyramidGenerator();
+		pyramid.generate(4);
+		System.out.println();
+		pyramid.generateReversed(4);
 	}
 
 }
