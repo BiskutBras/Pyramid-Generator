@@ -1,36 +1,34 @@
 
-
 public class PyramidGenerator {
 
-	public void generate(int height) {
+	public void generate(char character, int height) {
 		for (int i = 1; i <= height; i++) {
 
-			String character = "#";
-			String spaceCharacter = "";
+			StringBuilder space = getSpace(height, i);
+			StringBuilder characterString = getCharacter(character, i);
 
-			for (int j = 0; j < height - i; j++) {
-				spaceCharacter += ".";
-			}
-
-			int columnCount = 1;
-			while (columnCount < i * 2 - 1) {
-				character += "#";
-				columnCount++;
-			}
-
-			System.out.println(spaceCharacter + character + spaceCharacter);
-
+			System.out.println(space.toString() + characterString.toString() + space.toString());
 		}
 	}
 
-	public void generateReversed(int row) {
-		for (int i = 0; i < row; i++) {
-			System.out.println();
-			for (int j = 0; j < row; j++) {
-				System.out.print("#");
-			}
+	public StringBuilder getSpace(int height, int currentRow) {
+		StringBuilder str = new StringBuilder();
+		int spaceCount = height - currentRow;
+		for (int i = 0; i < spaceCount; i++) {
+			str.append(" ");
 		}
+		return str;
 	}
+
+	public StringBuilder getCharacter(char character, int currentRow) {
+		StringBuilder str = new StringBuilder(character);
+		int charCount = currentRow * 2 - 1;
+		for (int i = 1; i <= charCount; i++) {
+			str.append(character);
+		}
+		return str;
+	}
+
 }
 
 /*
