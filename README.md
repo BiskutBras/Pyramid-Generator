@@ -1,5 +1,5 @@
 # Pyramid-Generator
-By entering an input of whole number, generate a pyramid with number as the pyramid height.
+By entering an input of character choice and number, generate a pyramid with where character as building block and number as the pyramid height.
             
 
              #
